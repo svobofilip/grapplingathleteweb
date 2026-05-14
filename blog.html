@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Grappling Athlete</title>
+  <meta name="description" content="Články o silovém tréninku, kondici a fyzioterapii pro BJJ a grappling atlety." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="Pictures/Logo.png" alt="Grappling Athlete" />
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html#o-mne">Co jsem zač</a></li>
+        <li><a href="index.html#sluzby">Tréninkový program</a></li>
+        <li><a href="index.html#recenze">Recenze</a></li>
+        <li><a href="blog.html" style="color:var(--gold)">Blog</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
+      </ul>
+      <a href="index.html#kontakt" class="btn btn-primary nav__cta">Začít</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Otevřít menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── BLOG HERO ── -->
+  <div class="blog-hero">
+    <div class="container">
+      <span class="section-label">Grappling Athlete</span>
+      <h1 class="blog-hero__title">Blog</h1>
+      <div class="divider"></div>
+      <p class="section-subtitle">
+        Články o silovém tréninku, kondici, pohybu a fyzioterapii pro BJJ a grappling atlety.
+      </p>
+    </div>
+  </div>
+
+  <!-- ── BLOG EMPTY STATE ── -->
+  <section class="container blog-empty">
+    <div class="blog-empty__icon">📝</div>
+    <h2 class="blog-empty__title">Příspěvky brzy</h2>
+    <p class="blog-empty__text">
+      Blog je teprve na začátku. Brzy tu najdeš články o tréninku, prevenci zranění a vývoji grappling atletů.
+    </p>
+    <a href="index.html#kontakt" class="btn btn-primary" style="margin-top:2rem;">Kontaktovat</a>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="index.html" class="footer__logo">
+        <img src="Pictures/Logo.png" alt="Grappling Athlete" />
+      </a>
+      <p class="footer__copy">&copy; 2024 Grappling Athlete &mdash; Filip Svoboda, IČO: 19276907</p>
+      <nav class="footer__links">
+        <a href="index.html#sluzby">Program</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    const hamburger = document.getElementById('hamburger');
+    hamburger.addEventListener('click', () => nav.classList.toggle('nav--open'));
+    document.querySelectorAll('.nav__links a').forEach(link => {
+      link.addEventListener('click', () => nav.classList.remove('nav--open'));
+    });
+    window.addEventListener('scroll', () => {
+      nav.style.boxShadow = window.scrollY > 20 ? '0 4px 24px rgba(0,0,0,0.5)' : '';
+    });
+  </script>
+
+</body>
+</html>
