@@ -9,30 +9,50 @@
 </head>
 <body>
 
-  <!-- ── NAVIGATION ── -->
+  <!-- ══════════════════════════ NAV ══════════════════════════ -->
   <nav class="nav" id="nav">
     <div class="container nav__inner">
       <a href="index.html" class="nav__logo">
         <img src="Pictures/Logo.png" alt="Grappling Athlete" />
       </a>
       <ul class="nav__links">
-        <li><a href="#o-mne">Co jsem zač</a></li>
-        <li><a href="#sluzby">Tréninkový program</a></li>
-        <li><a href="#recenze">Recenze</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="#o-mne">
+          <span class="cs">Co jsem zač</span>
+          <span class="en">About me</span>
+        </a></li>
+        <li><a href="#sluzby">
+          <span class="cs">Tréninkový program</span>
+          <span class="en">Training program</span>
+        </a></li>
+        <li><a href="#recenze">
+          <span class="cs">Recenze</span>
+          <span class="en">Reviews</span>
+        </a></li>
+        <li><a href="#kontakt">
+          <span class="cs">Kontakt</span>
+          <span class="en">Contact</span>
+        </a></li>
       </ul>
-      <a href="#kontakt" class="btn btn-primary nav__cta">Začít</a>
-      <button class="nav__hamburger" id="hamburger" aria-label="Otevřít menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav__right">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn active" id="btn-cs" onclick="setLang('cs')">CZ</button>
+          <button class="lang-toggle__btn"        id="btn-en" onclick="setLang('en')">EN</button>
+        </div>
+        <a href="#kontakt" class="btn btn-primary nav__cta">
+          <span class="cs">Začít</span>
+          <span class="en">Start</span>
+        </a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Otevřít menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
-  <!-- ── HERO ── -->
+  <!-- ══════════════════════════ HERO ══════════════════════════ -->
   <section class="hero">
-    <div class="hero__bg"></div>
     <div class="hero__bg-img"></div>
+    <div class="hero__bg-gradient"></div>
     <div class="container hero__content">
       <span class="hero__tag">Grappling Athlete &mdash; BJJ &amp; Grappling</span>
       <h1 class="hero__title">
@@ -41,111 +61,174 @@
         <em>too weak</em> or <em>injured</em>
       </h1>
       <p class="hero__subtitle">
-        Silově-kondiční trénink a fyzioterapie šitá na míru BJJ a grappling atletům.
-        Buď silnější, výbušnější, mobilnější — a méně zraněný.
+        <span class="cs">Silově-kondiční trénink a fyzioterapie šitá na míru BJJ a grappling atletům. Buď silnější, výbušnější, mobilnější — a méně zraněný.</span>
+        <span class="en">Strength &amp; conditioning and physiotherapy tailored for BJJ and grappling athletes. Be stronger, more explosive, more mobile — and less injured.</span>
       </p>
       <div class="hero__actions">
-        <a href="#sluzby" class="btn btn-primary">Zjistit více</a>
-        <a href="#kontakt" class="btn btn-outline">Kontaktovat</a>
+        <a href="#o-mne" class="btn btn-primary">
+          <span class="cs">Zjistit více</span>
+          <span class="en">Learn more</span>
+        </a>
+        <a href="#kontakt" class="btn btn-outline-dark">
+          <span class="cs">Kontaktovat</span>
+          <span class="en">Get in touch</span>
+        </a>
       </div>
     </div>
     <div class="hero__scroll">SCROLL</div>
   </section>
 
-  <!-- ── SERVICES ── -->
-  <section class="section services" id="sluzby">
-    <div class="container">
-      <span class="section-label">Co nabízím</span>
-      <h2 class="section-title">Tréninkový program</h2>
-      <div class="divider"></div>
-      <p class="section-subtitle">
-        Dva specializované programy pro BJJ a grappling atlety — online, odkudkoli.
-      </p>
-
-      <div class="services__grid">
-
-        <!-- Card 1 -->
-        <div class="service-card">
-          <div class="service-card__icon">💪</div>
-          <h3 class="service-card__title">Online tréninkový program</h3>
-          <p class="service-card__desc">
-            Komplexní silově-kondiční program navržený pro aktivní grappling atlety.
-            Dostupný přes mobilní aplikaci, kdykoli a odkudkoli.
-          </p>
-          <ul class="service-card__list">
-            <li>Síla a výbušnost — 2× týdně</li>
-            <li>Kondice a mobilita — 1× týdně</li>
-            <li>Měsíční vzdělávání</li>
-            <li>Sledování pokroku a testování</li>
-            <li>Komunita a podpora trenéra</li>
-            <li>Přístup přes mobilní aplikaci</li>
-          </ul>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="service-card">
-          <div class="service-card__icon">🩺</div>
-          <h3 class="service-card__title">Injury Recovery</h3>
-          <p class="service-card__desc">
-            Individuální rehabilitace a úprava tréninku pro zraněné atlety.
-            Vrátíme tě na žíněnku co nejdřív a bezpečně.
-          </p>
-          <ul class="service-card__list">
-            <li>Úvodní online konzultace</li>
-            <li>Diagnostické hodnocení</li>
-            <li>Individuální rehabilitační plán</li>
-            <li>Úprava BJJ tréninku</li>
-            <li>Souhrnná zpráva</li>
-            <li>Průběžná online podpora</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ── ABOUT ── -->
-  <section class="section about" id="o-mne">
+  <!-- ══════════════════════════ ABOUT ══════════════════════════ -->
+  <section class="section is-light" id="o-mne">
     <div class="container">
       <div class="about__inner">
 
-        <div class="about__img-wrap">
-          <div class="about__img-placeholder">FOTO TRENÉRA</div>
-          <div class="about__frame"></div>
-        </div>
-
         <div class="about__text">
-          <span class="section-label">Co jsem zač</span>
-          <h2 class="section-title">Filip Svoboda</h2>
+          <span class="section-label">
+            <span class="cs">Co jsem zač</span>
+            <span class="en">About me</span>
+          </span>
+          <h2 class="section-title" style="color:var(--light-text)">Filip Svoboda</h2>
           <div class="divider"></div>
           <p class="about__bio">
-            Jsem silově-kondiční trenér a fyzioterapeut v <strong>Dark Side Movement</strong>.
-            Modrý pásek z <strong>SWAG Brno</strong>. Trénuji rekreační i závodní jiu-jitsu atlety.
+            <span class="cs">Jsem <strong>silově-kondiční trenér a fyzioterapeut</strong> v <strong>Dark Side Movement</strong>. Modrý pásek z <strong>SWAG Brno</strong>. Trénuji rekreační i závodní jiu-jitsu atlety.</span>
+            <span class="en">I'm a <strong>strength &amp; conditioning coach and physiotherapist</strong> at <strong>Dark Side Movement</strong>. Blue belt from <strong>SWAG Brno</strong>. I train both recreational and competitive jiu-jitsu athletes.</span>
           </p>
           <p class="about__bio">
-            Cílem projektu <strong>Grappling Athlete</strong> je posílit česko-slovenskou grappling scénu
-            výchovou atletů, kteří jsou silnější, výbušnější, pohyblivější a méně zranění —
-            a díky tomu lépe obstojí v mezinárodní konkurenci.
+            <span class="cs">Cílem projektu <strong>Grappling Athlete</strong> je posílit česko-slovenskou grappling scénu výchovou atletů, kteří jsou silnější, výbušnější, pohyblivější a méně zranění — a díky tomu lépe obstojí v mezinárodní konkurenci.</span>
+            <span class="en">The goal of <strong>Grappling Athlete</strong> is to strengthen the Czech-Slovak grappling scene by developing athletes who are stronger, more explosive, more mobile and less injury-prone — and therefore more competitive internationally.</span>
           </p>
           <div class="about__badges">
-            <span class="badge">Fyzioterapeut</span>
-            <span class="badge">S&amp;C trenér</span>
+            <span class="badge"><span class="cs">Fyzioterapeut</span><span class="en">Physiotherapist</span></span>
+            <span class="badge"><span class="cs">S&amp;C trenér</span><span class="en">S&amp;C Coach</span></span>
             <span class="badge">BJJ Blue Belt</span>
             <span class="badge">Dark Side Movement</span>
             <span class="badge">SWAG Brno</span>
           </div>
-          <div class="about__stats">
-            <div class="about__stat">
-              <div class="about__stat-num">2×</div>
-              <div class="about__stat-label">Síla týdně</div>
+          <div style="margin-top:2rem;">
+            <a href="#sluzby" class="btn btn-primary" style="margin-right:0.75rem">
+              <span class="cs">Zobrazit programy</span>
+              <span class="en">View programs</span>
+            </a>
+            <a href="#kontakt" class="btn btn-outline-light">
+              <span class="cs">Kontaktovat</span>
+              <span class="en">Get in touch</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="about__img-wrap">
+          <img src="Pictures/mewinning.jpg" alt="Filip Svoboda – Grappling Athlete" />
+          <div class="about__frame"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ SERVICES ══════════════════════════ -->
+  <section class="section is-white" id="sluzby">
+    <div class="container">
+      <span class="section-label">
+        <span class="cs">Co nabízím</span>
+        <span class="en">What I offer</span>
+      </span>
+      <h2 class="section-title" style="color:var(--light-text)">
+        <span class="cs">Moje služby</span>
+        <span class="en">My services</span>
+      </h2>
+      <div class="divider"></div>
+      <p class="section-subtitle" style="color:var(--light-muted)">
+        <span class="cs">Dva způsoby, jak ti mohu pomoct — ať chceš být silnější, nebo se potřebuješ dostat zpátky na žíněnku.</span>
+        <span class="en">Two ways I can help you — whether you want to get stronger, or you need to get back on the mat.</span>
+      </p>
+
+      <div class="services__panels">
+
+        <!-- Panel 1: Retarded Strength for BJJ -->
+        <div class="service-panel">
+          <div class="service-panel__body">
+            <div class="service-panel__tag">
+              <span class="cs">Online tréninkový program</span>
+              <span class="en">Online training program</span>
             </div>
-            <div class="about__stat">
-              <div class="about__stat-num">1×</div>
-              <div class="about__stat-label">Kondice týdně</div>
+            <h3 class="service-panel__title">Retarded Strength<br />for BJJ</h3>
+            <p class="service-panel__desc">
+              <span class="cs">Silově-kondiční program navržený speciálně pro jiu-jitsu atlety. Staň se silnějším, výbušnějším a odolnějším — bez toho, aby ti trénink BJJ šel stranou. Vše přes mobilní aplikaci TrainHeroic, kdykoli a odkudkoli.</span>
+              <span class="en">A strength &amp; conditioning program designed specifically for jiu-jitsu athletes. Get stronger, more explosive and harder to injure — without sacrificing your mat time. All through the TrainHeroic mobile app, anytime and anywhere.</span>
+            </p>
+            <ul class="service-panel__list">
+              <li><span class="cs">3 tréninky týdně — 2× síla a výbušnost, 1× kondice a mobilita</span><span class="en">3 sessions/week — 2× strength &amp; power, 1× conditioning &amp; mobility</span></li>
+              <li><span class="cs">Nové programování každý měsíc</span><span class="en">New programming every month</span></li>
+              <li><span class="cs">Instruktážní videa ke každému cviku</span><span class="en">Instructional videos for every exercise</span></li>
+              <li><span class="cs">Přímý kontakt s trenérem přes zprávy</span><span class="en">Direct coach access via messaging</span></li>
+              <li><span class="cs">Měsíční vzdělávací newsletter</span><span class="en">Monthly educational newsletter</span></li>
+              <li><span class="cs">Sledování pokroku a přístup ke komunitě</span><span class="en">Progress tracking and community access</span></li>
+            </ul>
+            <div class="service-panel__footer">
+              <div class="service-panel__stats">
+                <div>
+                  <div class="service-panel__stat-num">3×</div>
+                  <div class="service-panel__stat-label"><span class="cs">Týdně</span><span class="en">Per week</span></div>
+                </div>
+                <div>
+                  <div class="service-panel__stat-num">$23</div>
+                  <div class="service-panel__stat-label"><span class="cs">Měsíčně</span><span class="en">Per month</span></div>
+                </div>
+                <div>
+                  <div class="service-panel__stat-num">7</div>
+                  <div class="service-panel__stat-label"><span class="cs">Dní zdarma</span><span class="en">Days free</span></div>
+                </div>
+              </div>
+              <a href="https://marketplace.trainheroic.com/workout-plan/team/dark-side-grappling-athlete?attrib=597723-web"
+                 target="_blank" rel="noopener" class="service-panel__cta">
+                <span class="cs">Vstoupit do programu</span>
+                <span class="en">Join the program</span>
+                &rarr;
+              </a>
             </div>
-            <div class="about__stat">
-              <div class="about__stat-num">100%</div>
-              <div class="about__stat-label">Online</div>
+          </div>
+          <div class="service-panel__visual">
+            <img src="Pictures/programonphone.jpg" alt="Retarded Strength for BJJ — program v aplikaci" />
+            <span class="service-panel__price-badge">$23 / <span class="cs">měsíc</span><span class="en">month</span></span>
+            <span class="service-panel__trial-badge">7-<span class="cs">denní zkouška zdarma</span><span class="en">day free trial</span></span>
+          </div>
+        </div>
+
+        <!-- Panel 2: Back on the Mat -->
+        <div class="service-panel service-panel--alt">
+          <div class="service-panel__body">
+            <div class="service-panel__tag">
+              <span class="cs">Injury rehab &amp; návrat na žíněnku</span>
+              <span class="en">Injury rehab &amp; return to mat</span>
+            </div>
+            <h3 class="service-panel__title">
+              <span class="cs">Zpátky<br />na žíněnku</span>
+              <span class="en">Back<br />on the Mat</span>
+            </h3>
+            <p class="service-panel__desc">
+              <span class="cs">Zranění nemusí znamenat konec. Jako physio a S&amp;C trenér ti pomůžu zjistit, co se děje, sestavím plán návratu a upravím trénink tak, abys mohl pokračovat v BJJ — nebo se k němu co nejdřív vrátit.</span>
+              <span class="en">An injury doesn't have to mean the end. As a physio and S&amp;C coach I'll help you figure out what's going on, build a return plan and modify your training so you can keep doing BJJ — or get back to it as fast as possible.</span>
+            </p>
+            <ul class="service-panel__list">
+              <li><span class="cs">Úvodní online konzultace a anamnéza</span><span class="en">Initial online consultation and assessment</span></li>
+              <li><span class="cs">Individuální rehab plán šitý na míru</span><span class="en">Individual rehab plan tailored to you</span></li>
+              <li><span class="cs">Úprava BJJ tréninku během léčby</span><span class="en">BJJ training modifications during recovery</span></li>
+              <li><span class="cs">Videohovory a průběžná podpora</span><span class="en">Video calls and ongoing support</span></li>
+              <li><span class="cs">Souhrnná zpráva o průběhu</span><span class="en">Summary progress report</span></li>
+              <li><span class="cs">Prevence opakování zranění</span><span class="en">Injury recurrence prevention</span></li>
+            </ul>
+            <div class="service-panel__footer">
+              <a href="#kontakt" class="service-panel__cta">
+                <span class="cs">Domluvit konzultaci</span>
+                <span class="en">Book a consultation</span>
+                &rarr;
+              </a>
+            </div>
+          </div>
+          <div class="service-panel__visual service-panel__visual-dark">
+            <div class="service-panel__visual-placeholder">
+              <div class="service-panel__visual-icon" style="color:var(--gold)">🩹</div>
             </div>
           </div>
         </div>
@@ -154,67 +237,105 @@
     </div>
   </section>
 
-  <!-- ── REVIEWS ── -->
-  <section class="section reviews" id="recenze">
+  <!-- ══════════════════════════ PHOTO STRIP 1 ══════════════════════════ -->
+  <div class="photo-strip">
+    <img src="Pictures/grapplingathletegroup.jpg" alt="Grappling Athlete group" />
+    <div class="photo-strip__overlay">
+      <div class="photo-strip__text">
+        <p class="photo-strip__quote">
+          <span class="cs">Česko-slovenská grappling scéna<br /><em>posiluje.</em></span>
+          <span class="en">The Czech-Slovak grappling scene<br /><em>is getting stronger.</em></span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════ REVIEWS ══════════════════════════ -->
+  <section class="section is-white" id="recenze">
     <div class="container">
-      <span class="section-label">Recenze</span>
-      <h2 class="section-title">Co říkají atleti</h2>
+      <span class="section-label">
+        <span class="cs">Recenze</span>
+        <span class="en">Reviews</span>
+      </span>
+      <h2 class="section-title" style="color:var(--light-text)">
+        <span class="cs">Co říkají atleti</span>
+        <span class="en">What athletes say</span>
+      </h2>
       <div class="divider"></div>
 
       <div class="reviews__grid">
 
+        <!-- Andrej Kalašnik -->
         <div class="review-card">
           <div class="review-card__stars">★★★★★</div>
           <p class="review-card__quote">
-            „Díky skvěle nastavenému tréninku PRka šplhají nahoru a já stíhám regenerovat i trénovat jiu-jitsu na 100&nbsp;%."
+            „Filip mi zachránil zápas. Měsíc před titulovým zápasem jsem měl natrhle kolení vazy. Hýbal jsem se jen s pomocí berlí a ortézy. Filip se mi věnoval skoro každý den, aby jsme mohli dostat koleno do stavu, při kterém bylo možno zápasit. Je to profík."
+          </p>
+          <p class="review-card__quote-en">
+            "Filip saved my fight. A month before my title fight, I had torn ligaments in my knee. I could only get around with crutches and a brace. Filip worked with me almost every day so we could get the knee into a state where I was able to compete. He's a pro."
           </p>
           <div class="review-card__author">
-            <div class="review-card__avatar">AO</div>
+            <div class="review-card__avatar"><img src="Pictures/kalach.jpg" alt="Andrej Kalašnik" /></div>
             <div>
-              <div class="review-card__name">Anton Orlov</div>
-              <div class="review-card__role">Purple Belt</div>
+              <div class="review-card__name">Andrej Kalašnik</div>
+              <div class="review-card__role"><span class="cs">Grappling atlet</span><span class="en">Grappling athlete</span></div>
             </div>
           </div>
         </div>
 
+        <!-- Honza Stach -->
         <div class="review-card">
           <div class="review-card__stars">★★★★★</div>
           <p class="review-card__quote">
-            „Dokáže svým individuálním přístupem posunout každého, nezáleží na tom jak dlouho nebo co cvičí a jak na tom je."
+            „S Fildou z DarkSide společně makáme na silovce necelé dva roky. Pomáhá mi udržet mnohem větší konzistenci a pestrost silové přípravy. Jsem maximálně spokojený a jednoznačně nejsilnější za cca 20 let výkonnostního sportování. Jediné, co bych změnil, je začít s touhle spoluprací mnohem dřív&nbsp;:)"
+          </p>
+          <p class="review-card__quote-en">
+            "Filda from DarkSide and I have been working together on strength training for almost two years. He helps me maintain far greater consistency and variety in my strength prep. I'm extremely satisfied and clearly the strongest I've been in about 20 years of competitive sport. The only thing I'd change is starting this collaboration much sooner :)"
           </p>
           <div class="review-card__author">
-            <div class="review-card__avatar">LW</div>
+            <div class="review-card__avatar"><img src="Pictures/happyhonza.jpg" alt="Honza Stach" /></div>
             <div>
-              <div class="review-card__name">Lukáš Wolf</div>
-              <div class="review-card__role">Head Coach, Fight Club Brno</div>
+              <div class="review-card__name">Honza Stach</div>
+              <div class="review-card__role"><span class="cs">Výkonnostní sportovec</span><span class="en">Competitive athlete</span></div>
             </div>
           </div>
         </div>
 
+        <!-- Jan Perníček -->
         <div class="review-card">
           <div class="review-card__stars">★★★★★</div>
           <p class="review-card__quote">
-            „Rozumí plně pohybovým vzorcům potřebným pro rozvoj v jitsu. Zároveň není až takový kamarád, že by tě nechal se flákat 😂"
+            „Fílův silový a kondiční program Grappling Athlete je skvělý pro všechny cvičence, kteří mají alespoň lehčí zkušenosti. Program je přizpůsobený pro grapplery tak, aby člověk byl stále schopný trénovat BJJ a měl kolikrát více energie po odcvičení než předtím. Ačkoliv je to online, tak získáš lepší program a péči, než když jsem chodil osobně k jiným S&amp;C coachům."
+          </p>
+          <p class="review-card__quote-en">
+            "Fíla's strength and conditioning program 'Grappling Athlete' is great for everyone with at least some training experience. The program is tailored for grapplers so that you're still able to train BJJ and often have more energy after the workout than before. Even though it's online, you'll get a better program and better care than I used to get going to other S&amp;C coaches in person."
           </p>
           <div class="review-card__author">
-            <div class="review-card__avatar">KK</div>
+            <div class="review-card__avatar"><img src="Pictures/pernicek.jpg" alt="Jan Perníček" /></div>
             <div>
-              <div class="review-card__name">Kevin Kovács</div>
-              <div class="review-card__role">Purple Belt</div>
+              <div class="review-card__name">Jan Perníček</div>
+              <div class="review-card__role">BJJ</div>
             </div>
           </div>
         </div>
 
+        <!-- Katarina Vojvodová -->
         <div class="review-card">
           <div class="review-card__stars">★★★★★</div>
-          <p class="review-card__quote">
-            „Když je někdo zraněný, umí okamžitě vymyslet alternativu, jak si odcvičit a nezůstat stát. Trénink s Filipem můžu jen doporučit!"
+          <p class="review-card__quote" style="color:var(--light-muted)">
+            <em style="opacity:0.5">
+              <!-- TODO: doplnit text recenze -->
+              Text recenze brzy...
+            </em>
+          </p>
+          <p class="review-card__quote-en" style="color:var(--light-muted)">
+            <em style="opacity:0.5">Review text coming soon...</em>
           </p>
           <div class="review-card__author">
-            <div class="review-card__avatar">LS</div>
+            <div class="review-card__avatar"><img src="Pictures/kacka.jpg" alt="Katarina Vojvodová" /></div>
             <div>
-              <div class="review-card__name">Linda Stach</div>
-              <div class="review-card__role">Black Belt</div>
+              <div class="review-card__name">Katarina Vojvodová</div>
+              <div class="review-card__role">BJJ</div>
             </div>
           </div>
         </div>
@@ -223,31 +344,68 @@
     </div>
   </section>
 
-  <!-- ── PARTNERS ── -->
-  <section class="section partners">
-    <div class="container">
-      <span class="section-label" style="text-align:center;display:block;">Partneři</span>
-      <div class="partners__row">
-        <span class="partner">Dark Side Movement</span>
-        <span class="partner">SWAG Brno</span>
-        <span class="partner">Tatamy</span>
+  <!-- ══════════════════════════ PHOTO STRIP 2 ══════════════════════════ -->
+  <div class="photo-strip">
+    <img src="Pictures/swagpumplingroup.jpg" alt="SWAG Brno group" />
+    <div class="photo-strip__overlay">
+      <div class="photo-strip__text">
+        <p class="photo-strip__quote">
+          <span class="cs">Silnější spolu —<br /><em>na žíněnce i mimo ni.</em></span>
+          <span class="en">Stronger together —<br /><em>on the mat and beyond.</em></span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════ PARTNERS ══════════════════════════ -->
+  <section class="section is-light">
+    <div class="container" style="text-align:center">
+      <span class="section-label">
+        <span class="cs">Partneři</span>
+        <span class="en">Partners</span>
+      </span>
+      <h2 class="section-title" style="color:var(--light-text)">
+        <span class="cs">Se kým pracuji</span>
+        <span class="en">Who I work with</span>
+      </h2>
+      <div class="divider" style="margin-left:auto;margin-right:auto"></div>
+      <p style="color:var(--light-muted);font-size:0.95rem;max-width:500px;margin:0 auto">
+        <span class="cs">Spolupracuji s předními grappling a fitness organizacemi v Česku a na Slovensku.</span>
+        <span class="en">I work with leading grappling and fitness organisations in the Czech Republic and Slovakia.</span>
+      </p>
+      <div class="partners__logos">
+        <a href="https://darksidemovement.cz" target="_blank" rel="noopener" class="partner-logo">
+          <img src="Pictures/DSM Logo.png" alt="Dark Side Movement" />
+        </a>
+        <a href="https://www.swag-brno.cz" target="_blank" rel="noopener" class="partner-logo">
+          <img src="Pictures/SWAG Logo.png" alt="SWAG Brno" />
+        </a>
+        <a href="https://tatamy.cz" target="_blank" rel="noopener" class="partner-logo">
+          <img src="Pictures/Tatamy Logo.webp" alt="Tatamy" />
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ── CONTACT ── -->
-  <section class="section contact" id="kontakt">
+  <!-- ══════════════════════════ CONTACT ══════════════════════════ -->
+  <section class="section is-dark" id="kontakt">
     <div class="container">
-      <span class="section-label">Kontakt</span>
-      <h2 class="section-title">Pojďme spolu začít</h2>
+      <span class="section-label">
+        <span class="cs">Kontakt</span>
+        <span class="en">Contact</span>
+      </span>
+      <h2 class="section-title" style="color:#fff">
+        <span class="cs">Pojďme spolu začít</span>
+        <span class="en">Let's get started</span>
+      </h2>
       <div class="divider"></div>
 
       <div class="contact__inner">
 
         <div class="contact__info">
-          <p class="section-subtitle">
-            Máš otázku, chceš začít s programem, nebo se potřebuješ domluvit na konzultaci?
-            Napiš nebo zavolej.
+          <p class="section-subtitle" style="color:var(--dark-muted)">
+            <span class="cs">Máš otázku, chceš začít s programem nebo se potřebuješ domluvit na konzultaci? Napiš nebo zavolej.</span>
+            <span class="en">Have a question, want to start the program, or need to arrange a consultation? Write or call.</span>
           </p>
           <div class="contact__items">
             <div class="contact__item">
@@ -260,7 +418,7 @@
             <div class="contact__item">
               <div class="contact__item-icon">📞</div>
               <div>
-                <div class="contact__item-label">Telefon</div>
+                <div class="contact__item-label"><span class="cs">Telefon</span><span class="en">Phone</span></div>
                 <a href="tel:+420608360448" class="contact__item-value">+420 608 360 448</a>
               </div>
             </div>
@@ -273,14 +431,14 @@
             </div>
           </div>
           <div class="contact__social">
-            <a href="#" class="social-btn" aria-label="Instagram">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            <a href="https://www.instagram.com/fidasvoboda/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
             </a>
-            <a href="#" class="social-btn" aria-label="Facebook">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            <a href="https://www.facebook.com/profile.php?id=100005096778199" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
             </a>
-            <a href="#" class="social-btn" aria-label="YouTube">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20.06 12 20.06 12 20.06s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"></path><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon></svg>
+            <a href="https://www.youtube.com/@grapplingathlete" target="_blank" rel="noopener" class="social-btn" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20.06 12 20.06 12 20.06s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
             </a>
           </div>
         </div>
@@ -288,18 +446,33 @@
         <div class="contact__form-wrap">
           <form>
             <div class="form-group">
-              <label for="name">Jméno</label>
-              <input type="text" id="name" placeholder="Tvoje jméno" />
+              <label for="name"><span class="cs">Jméno</span><span class="en">Name</span></label>
+              <input type="text" id="name" placeholder="Filip Novák" />
             </div>
             <div class="form-group">
               <label for="email">E-mail</label>
               <input type="email" id="email" placeholder="tvuj@email.cz" />
             </div>
             <div class="form-group">
-              <label for="message">Zpráva</label>
+              <label for="subject"><span class="cs">Téma</span><span class="en">Subject</span></label>
+              <select id="subject">
+                <option value="" disabled selected>
+                  <span class="cs">Vyber službu...</span>
+                  <span class="en">Select a service...</span>
+                </option>
+                <option value="online-program" data-cs="Retarded Strength for BJJ – online program" data-en="Retarded Strength for BJJ – online program">Retarded Strength for BJJ – online program</option>
+                <option value="inperson"       data-cs="Osobní trénink"                           data-en="In-person training">Osobní trénink</option>
+                <option value="rehab"          data-cs="Injury rehab – návrat na žíněnku"         data-en="Injury rehab – return to mat">Injury rehab – návrat na žíněnku</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message"><span class="cs">Zpráva</span><span class="en">Message</span></label>
               <textarea id="message" placeholder="Jak ti mohu pomoct?"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Odeslat zprávu</button>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+              <span class="cs">Odeslat zprávu</span>
+              <span class="en">Send message</span>
+            </button>
           </form>
         </div>
 
@@ -307,35 +480,60 @@
     </div>
   </section>
 
-  <!-- ── FOOTER ── -->
+  <!-- ══════════════════════════ FOOTER ══════════════════════════ -->
   <footer class="footer">
     <div class="container footer__inner">
       <a href="index.html" class="footer__logo">
         <img src="Pictures/Logo.png" alt="Grappling Athlete" />
       </a>
-      <p class="footer__copy">&copy; 2024 Grappling Athlete &mdash; Filip Svoboda, IČO: 19276907</p>
+      <p class="footer__copy">
+        &copy; 2025 Grappling Athlete &mdash; Filip Svoboda, IČO: 19276907
+      </p>
       <nav class="footer__links">
-        <a href="#sluzby">Program</a>
-        <a href="blog.html">Blog</a>
-        <a href="#kontakt">Kontakt</a>
+        <a href="#sluzby"><span class="cs">Program</span><span class="en">Program</span></a>
+        <a href="#kontakt"><span class="cs">Kontakt</span><span class="en">Contact</span></a>
       </nav>
     </div>
   </footer>
 
+  <!-- ══════════════════════════ JS ══════════════════════════ -->
   <script>
-    // Mobile nav toggle
-    const nav = document.getElementById('nav');
+    // ── Language switcher ──
+    function setLang(lang) {
+      document.body.classList.toggle('lang-en', lang === 'en');
+      document.getElementById('btn-cs').classList.toggle('active', lang === 'cs');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.documentElement.lang = lang;
+      localStorage.setItem('ga-lang', lang);
+
+      // Update select options text
+      document.querySelectorAll('#subject option[data-cs]').forEach(opt => {
+        opt.textContent = lang === 'en' ? opt.dataset.en : opt.dataset.cs;
+      });
+      // Update select placeholder
+      const placeholder = document.querySelector('#subject option[disabled]');
+      if (placeholder) placeholder.textContent = lang === 'en' ? 'Select a service...' : 'Vyber službu...';
+
+      // Update textarea placeholder
+      const msg = document.getElementById('message');
+      if (msg) msg.placeholder = lang === 'en' ? 'How can I help you?' : 'Jak ti mohu pomoct?';
+    }
+
+    // Restore saved preference
+    const savedLang = localStorage.getItem('ga-lang');
+    if (savedLang === 'en') setLang('en');
+
+    // ── Mobile nav ──
+    const nav       = document.getElementById('nav');
     const hamburger = document.getElementById('hamburger');
     hamburger.addEventListener('click', () => nav.classList.toggle('nav--open'));
+    document.querySelectorAll('.nav__links a').forEach(link =>
+      link.addEventListener('click', () => nav.classList.remove('nav--open'))
+    );
 
-    // Close nav on link click
-    document.querySelectorAll('.nav__links a').forEach(link => {
-      link.addEventListener('click', () => nav.classList.remove('nav--open'));
-    });
-
-    // Nav shadow on scroll
+    // ── Nav shadow on scroll ──
     window.addEventListener('scroll', () => {
-      nav.style.boxShadow = window.scrollY > 20 ? '0 4px 24px rgba(0,0,0,0.5)' : '';
+      nav.style.boxShadow = window.scrollY > 20 ? '0 4px 24px rgba(0,0,0,0.6)' : '';
     });
   </script>
 
