@@ -20,10 +20,27 @@
           <span class="cs">Co jsem zač</span>
           <span class="en">About me</span>
         </a></li>
-        <li><a href="#sluzby">
-          <span class="cs">Tréninkový program</span>
-          <span class="en">Training program</span>
-        </a></li>
+        <li class="nav__dropdown">
+          <a href="#sluzby">
+            <span class="cs">Služby</span>
+            <span class="en">Services</span>
+          </a>
+          <ul class="nav__dropdown-menu">
+            <li><a href="#sluzba-rs4bjj">
+              <span class="menu-icon">💪</span>
+              Retarded Strength for BJJ
+            </a></li>
+            <li><a href="#sluzba-rehab">
+              <span class="menu-icon">🩹</span>
+              <span class="cs">Zpátky na žíněnku</span>
+              <span class="en">Back on the Mat</span>
+            </a></li>
+            <li><a href="#sluzba-coaching">
+              <span class="menu-icon">🎯</span>
+              Online Coaching
+            </a></li>
+          </ul>
+        </li>
         <li><a href="#recenze">
           <span class="cs">Recenze</span>
           <span class="en">Reviews</span>
@@ -53,27 +70,12 @@
   <section class="hero">
     <div class="hero__bg-img"></div>
     <div class="hero__bg-gradient"></div>
-    <div class="container hero__content">
-      <span class="hero__tag">Grappling Athlete &mdash; BJJ &amp; Grappling</span>
+    <div class="hero__content">
       <h1 class="hero__title">
-        BJJ doesn't work,<br />
+        BJJ doesn't work<br />
         if you are just<br />
         <em>too weak</em> or <em>injured</em>
       </h1>
-      <p class="hero__subtitle">
-        <span class="cs">Silově-kondiční trénink a fyzioterapie šitá na míru BJJ a grappling atletům. Buď silnější, výbušnější, mobilnější — a méně zraněný.</span>
-        <span class="en">Strength &amp; conditioning and physiotherapy tailored for BJJ and grappling athletes. Be stronger, more explosive, more mobile — and less injured.</span>
-      </p>
-      <div class="hero__actions">
-        <a href="#o-mne" class="btn btn-primary">
-          <span class="cs">Zjistit více</span>
-          <span class="en">Learn more</span>
-        </a>
-        <a href="#kontakt" class="btn btn-outline-dark">
-          <span class="cs">Kontaktovat</span>
-          <span class="en">Get in touch</span>
-        </a>
-      </div>
     </div>
     <div class="hero__scroll">SCROLL</div>
   </section>
@@ -84,19 +86,22 @@
       <div class="about__inner">
 
         <div class="about__text">
-          <span class="section-label">
+          <h2 class="section-title" style="color:var(--light-text)">
             <span class="cs">Co jsem zač</span>
-            <span class="en">About me</span>
-          </span>
-          <h2 class="section-title" style="color:var(--light-text)">Filip Svoboda</h2>
+            <span class="en">Who Am I</span>
+          </h2>
           <div class="divider"></div>
           <p class="about__bio">
-            <span class="cs">Jsem <strong>silově-kondiční trenér a fyzioterapeut</strong> v <strong>Dark Side Movement</strong>. Modrý pásek z <strong>SWAG Brno</strong>. Trénuji rekreační i závodní jiu-jitsu atlety.</span>
-            <span class="en">I'm a <strong>strength &amp; conditioning coach and physiotherapist</strong> at <strong>Dark Side Movement</strong>. Blue belt from <strong>SWAG Brno</strong>. I train both recreational and competitive jiu-jitsu athletes.</span>
+            <span class="cs">Jsem <strong>silově-kondiční trenér a fyzioterapeut</strong> v <strong>Dark Side Movement</strong>, grappler za <strong>SWAG Brno</strong>.</span>
+            <span class="en">I'm a <strong>strength &amp; conditioning coach and physiotherapist</strong> at <strong>Dark Side Movement</strong>, a grappler from <strong>SWAG Brno</strong>.</span>
           </p>
           <p class="about__bio">
-            <span class="cs">Cílem projektu <strong>Grappling Athlete</strong> je posílit česko-slovenskou grappling scénu výchovou atletů, kteří jsou silnější, výbušnější, pohyblivější a méně zranění — a díky tomu lépe obstojí v mezinárodní konkurenci.</span>
-            <span class="en">The goal of <strong>Grappling Athlete</strong> is to strengthen the Czech-Slovak grappling scene by developing athletes who are stronger, more explosive, more mobile and less injury-prone — and therefore more competitive internationally.</span>
+            <span class="cs">Spolupracuju s fightery od hobíku, přes výkonnostní závodníky po profesionální atlety. Pomáhám jim s fyzickou přípravou v posilovně a s rehabilitací po zranění.</span>
+            <span class="en">I work with fighters ranging from hobbyists, through competitive athletes to professionals. I help them with physical preparation in the gym and with rehab after injuries.</span>
+          </p>
+          <p class="about__bio">
+            <span class="cs">Cílem <strong>Grappling Athlete</strong> je odemčít co nejvíce grapplerům Retarded Strength a udělat z nich výbušná a nafýzovaná monstra, která se jen tak nezraní (a když už, tak budou brzo zpátky).</span>
+            <span class="en">The goal of <strong>Grappling Athlete</strong> is to unlock Retarded Strength for as many grapplers as possible — turning them into explosive, jacked monsters that don't get injured easily (and when they do, they'll be back fast).</span>
           </p>
           <div class="about__badges">
             <span class="badge"><span class="cs">Fyzioterapeut</span><span class="en">Physiotherapist</span></span>
@@ -104,16 +109,6 @@
             <span class="badge">BJJ Blue Belt</span>
             <span class="badge">Dark Side Movement</span>
             <span class="badge">SWAG Brno</span>
-          </div>
-          <div style="margin-top:2rem;">
-            <a href="#sluzby" class="btn btn-primary" style="margin-right:0.75rem">
-              <span class="cs">Zobrazit programy</span>
-              <span class="en">View programs</span>
-            </a>
-            <a href="#kontakt" class="btn btn-outline-light">
-              <span class="cs">Kontaktovat</span>
-              <span class="en">Get in touch</span>
-            </a>
           </div>
         </div>
 
@@ -129,24 +124,16 @@
   <!-- ══════════════════════════ SERVICES ══════════════════════════ -->
   <section class="section is-white" id="sluzby">
     <div class="container">
-      <span class="section-label">
-        <span class="cs">Co nabízím</span>
-        <span class="en">What I offer</span>
-      </span>
       <h2 class="section-title" style="color:var(--light-text)">
-        <span class="cs">Moje služby</span>
-        <span class="en">My services</span>
+        <span class="cs">Jak ti můžu pomoct?</span>
+        <span class="en">What Do I Offer?</span>
       </h2>
       <div class="divider"></div>
-      <p class="section-subtitle" style="color:var(--light-muted)">
-        <span class="cs">Dva způsoby, jak ti mohu pomoct — ať chceš být silnější, nebo se potřebuješ dostat zpátky na žíněnku.</span>
-        <span class="en">Two ways I can help you — whether you want to get stronger, or you need to get back on the mat.</span>
-      </p>
 
       <div class="services__panels">
 
-        <!-- Panel 1: Retarded Strength for BJJ -->
-        <div class="service-panel">
+        <!-- ── Panel 1: Retarded Strength for BJJ ── -->
+        <div class="service-panel" id="sluzba-rs4bjj">
           <div class="service-panel__body">
             <div class="service-panel__tag">
               <span class="cs">Online tréninkový program</span>
@@ -154,17 +141,17 @@
             </div>
             <h3 class="service-panel__title">Retarded Strength<br />for BJJ</h3>
             <p class="service-panel__desc">
-              <span class="cs">Silově-kondiční program navržený speciálně pro jiu-jitsu atlety. Staň se silnějším, výbušnějším a odolnějším — bez toho, aby ti trénink BJJ šel stranou. Vše přes mobilní aplikaci TrainHeroic, kdykoli a odkudkoli.</span>
-              <span class="en">A strength &amp; conditioning program designed specifically for jiu-jitsu athletes. Get stronger, more explosive and harder to injure — without sacrificing your mat time. All through the TrainHeroic mobile app, anytime and anywhere.</span>
+              <span class="cs">Online tréninkový program do posilovny navržený speciálně pro jiu-jitsu zápasníky. Komplexní plán plně kompatibilní s tréninky jitsu. Vše přes mobilní aplikaci TrainHeroic, kdykoli a odkudkoli.</span>
+              <span class="en">An online gym training program designed specifically for jiu-jitsu competitors. A comprehensive training plan fully compatible with your jiu-jitsu sessions. All through the TrainHeroic mobile app, anytime and anywhere.</span>
             </p>
-            <ul class="service-panel__list">
-              <li><span class="cs">3 tréninky týdně — 2× síla a výbušnost, 1× kondice a mobilita</span><span class="en">3 sessions/week — 2× strength &amp; power, 1× conditioning &amp; mobility</span></li>
-              <li><span class="cs">Nové programování každý měsíc</span><span class="en">New programming every month</span></li>
-              <li><span class="cs">Instruktážní videa ke každému cviku</span><span class="en">Instructional videos for every exercise</span></li>
-              <li><span class="cs">Přímý kontakt s trenérem přes zprávy</span><span class="en">Direct coach access via messaging</span></li>
-              <li><span class="cs">Měsíční vzdělávací newsletter</span><span class="en">Monthly educational newsletter</span></li>
-              <li><span class="cs">Sledování pokroku a přístup ke komunitě</span><span class="en">Progress tracking and community access</span></li>
-            </ul>
+            <div class="service-panel__benefits">
+              <span class="service-panel__benefit"><span class="cs">Tréninky 3x týdně</span><span class="en">3 sessions per week</span></span>
+              <span class="service-panel__benefit"><span class="cs">Nový plán každý měsíc</span><span class="en">New plan every month</span></span>
+              <span class="service-panel__benefit"><span class="cs">Videa ke všem cvikům</span><span class="en">Videos for every exercise</span></span>
+              <span class="service-panel__benefit"><span class="cs">Kontakt s coachem přes zprávy</span><span class="en">Coach contact via messages</span></span>
+              <span class="service-panel__benefit"><span class="cs">Vzdělávací newsletter</span><span class="en">Educational newsletter</span></span>
+              <span class="service-panel__benefit"><span class="cs">Sledování progresu</span><span class="en">Progress tracking</span></span>
+            </div>
             <div class="service-panel__footer">
               <div class="service-panel__stats">
                 <div>
@@ -182,43 +169,49 @@
               </div>
               <a href="https://marketplace.trainheroic.com/workout-plan/team/dark-side-grappling-athlete?attrib=597723-web"
                  target="_blank" rel="noopener" class="service-panel__cta">
-                <span class="cs">Vstoupit do programu</span>
-                <span class="en">Join the program</span>
+                <span class="cs">Vyzkoušej týden zdarma</span>
+                <span class="en">Try one week free</span>
                 &rarr;
               </a>
             </div>
           </div>
           <div class="service-panel__visual">
-            <img src="Pictures/programonphone.jpg" alt="Retarded Strength for BJJ — program v aplikaci" />
+            <img src="Pictures/khamzat.jpeg" alt="Retarded Strength for BJJ" />
             <span class="service-panel__price-badge">$23 / <span class="cs">měsíc</span><span class="en">month</span></span>
             <span class="service-panel__trial-badge">7-<span class="cs">denní zkouška zdarma</span><span class="en">day free trial</span></span>
           </div>
         </div>
 
-        <!-- Panel 2: Back on the Mat -->
-        <div class="service-panel service-panel--alt">
+        <!-- ── Panel 2: Back on the Mat ── -->
+        <div class="service-panel service-panel--alt" id="sluzba-rehab">
           <div class="service-panel__body">
             <div class="service-panel__tag">
-              <span class="cs">Injury rehab &amp; návrat na žíněnku</span>
-              <span class="en">Injury rehab &amp; return to mat</span>
+              <span class="cs">Rehab po zranění</span>
+              <span class="en">Injury rehab</span>
             </div>
             <h3 class="service-panel__title">
               <span class="cs">Zpátky<br />na žíněnku</span>
               <span class="en">Back<br />on the Mat</span>
             </h3>
             <p class="service-panel__desc">
-              <span class="cs">Zranění nemusí znamenat konec. Jako physio a S&amp;C trenér ti pomůžu zjistit, co se děje, sestavím plán návratu a upravím trénink tak, abys mohl pokračovat v BJJ — nebo se k němu co nejdřív vrátit.</span>
-              <span class="en">An injury doesn't have to mean the end. As a physio and S&amp;C coach I'll help you figure out what's going on, build a return plan and modify your training so you can keep doing BJJ — or get back to it as fast as possible.</span>
+              <span class="cs">Vrať se po zranění v ještě lepší formě než před ním. Jako fyzioterapeut s vlastní praxí v grapplingu ti pomůžu sestavit plán návratu na míru podle úvodní diagnostiky.</span>
+              <span class="en">Come back from injury in better shape than before. As a physiotherapist with hands-on grappling experience, I'll build a personalised return plan based on your initial assessment.</span>
             </p>
-            <ul class="service-panel__list">
-              <li><span class="cs">Úvodní online konzultace a anamnéza</span><span class="en">Initial online consultation and assessment</span></li>
-              <li><span class="cs">Individuální rehab plán šitý na míru</span><span class="en">Individual rehab plan tailored to you</span></li>
-              <li><span class="cs">Úprava BJJ tréninku během léčby</span><span class="en">BJJ training modifications during recovery</span></li>
-              <li><span class="cs">Videohovory a průběžná podpora</span><span class="en">Video calls and ongoing support</span></li>
-              <li><span class="cs">Souhrnná zpráva o průběhu</span><span class="en">Summary progress report</span></li>
-              <li><span class="cs">Prevence opakování zranění</span><span class="en">Injury recurrence prevention</span></li>
-            </ul>
+            <div class="service-panel__benefits">
+              <span class="service-panel__benefit"><span class="cs">Úvodní diagnostika</span><span class="en">Initial assessment</span></span>
+              <span class="service-panel__benefit"><span class="cs">Individuální rehab plán</span><span class="en">Individual rehab plan</span></span>
+              <span class="service-panel__benefit"><span class="cs">Natočení videí cviků</span><span class="en">Exercise demonstration videos</span></span>
+              <span class="service-panel__benefit"><span class="cs">Úprava BJJ tréninku</span><span class="en">BJJ training modifications</span></span>
+              <span class="service-panel__benefit"><span class="cs">Shrnující výstup</span><span class="en">Summary report</span></span>
+              <span class="service-panel__benefit"><span class="cs">Online podpora</span><span class="en">Online support</span></span>
+            </div>
             <div class="service-panel__footer">
+              <div class="service-panel__stats">
+                <div>
+                  <div class="service-panel__stat-num">1 200</div>
+                  <div class="service-panel__stat-label">Kč / <span class="cs">konzultace</span><span class="en">consultation</span></div>
+                </div>
+              </div>
               <a href="#kontakt" class="service-panel__cta">
                 <span class="cs">Domluvit konzultaci</span>
                 <span class="en">Book a consultation</span>
@@ -226,14 +219,50 @@
               </a>
             </div>
           </div>
-          <div class="service-panel__visual service-panel__visual-dark">
-            <div class="service-panel__visual-placeholder">
-              <div class="service-panel__visual-icon" style="color:var(--gold)">🩹</div>
-            </div>
+          <div class="service-panel__visual">
+            <img src="Pictures/kalach.jpg" alt="Zpátky na žíněnku" />
           </div>
         </div>
 
-      </div>
+        <!-- ── Panel 3: Online Coaching ── -->
+        <div class="service-panel" id="sluzba-coaching">
+          <div class="service-panel__body">
+            <div class="service-panel__tag">
+              <span class="cs">Individuální koučink</span>
+              <span class="en">Individual coaching</span>
+            </div>
+            <h3 class="service-panel__title">Online<br />Coaching</h3>
+            <p class="service-panel__desc">
+              <span class="cs">Online coaching šitý na míru tvým cílům, výkonnosti a zdravotnímu stavu. Ať už se připravuješ na důležitý turnaj, potřebuješ doléčit zranění, nebo chceš rozvíjet sílu a kondici v off-campu.</span>
+              <span class="en">Online coaching tailored to your goals, performance level and physical condition. Whether you're preparing for a major tournament, recovering from injury, or building strength and conditioning in the off-camp.</span>
+            </p>
+            <div class="service-panel__benefits">
+              <span class="service-panel__benefit"><span class="cs">Úvodní konzultace a nastavení cílů</span><span class="en">Intro consultation and goal setting</span></span>
+              <span class="service-panel__benefit"><span class="cs">Zcela individuální tréninkový plán</span><span class="en">Fully individual training plan</span></span>
+              <span class="service-panel__benefit"><span class="cs">Pravidelné videohovory s trenérem</span><span class="en">Regular video calls with coach</span></span>
+              <span class="service-panel__benefit"><span class="cs">Průběžné úpravy plánu podle pokroku</span><span class="en">Ongoing plan adjustments based on progress</span></span>
+              <span class="service-panel__benefit"><span class="cs">Přímý kontakt kdykoli potřebuješ</span><span class="en">Direct contact whenever you need it</span></span>
+            </div>
+            <div class="service-panel__footer">
+              <div class="service-panel__stats">
+                <div>
+                  <div class="service-panel__stat-num">2 600</div>
+                  <div class="service-panel__stat-label">Kč / <span class="cs">měsíc</span><span class="en">month</span></div>
+                </div>
+              </div>
+              <a href="#kontakt" class="service-panel__cta">
+                <span class="cs">Mám zájem</span>
+                <span class="en">I'm interested</span>
+                &rarr;
+              </a>
+            </div>
+          </div>
+          <div class="service-panel__visual">
+            <img src="Pictures/onlinecoaching.jpeg" alt="Online Coaching" />
+          </div>
+        </div>
+
+      </div><!-- /services__panels -->
     </div>
   </section>
 
@@ -243,8 +272,7 @@
     <div class="photo-strip__overlay">
       <div class="photo-strip__text">
         <p class="photo-strip__quote">
-          <span class="cs">Česko-slovenská grappling scéna<br /><em>posiluje.</em></span>
-          <span class="en">The Czech-Slovak grappling scene<br /><em>is getting stronger.</em></span>
+          Síla + síla = <em>technika</em>
         </p>
       </div>
     </div>
@@ -253,10 +281,6 @@
   <!-- ══════════════════════════ REVIEWS ══════════════════════════ -->
   <section class="section is-white" id="recenze">
     <div class="container">
-      <span class="section-label">
-        <span class="cs">Recenze</span>
-        <span class="en">Reviews</span>
-      </span>
       <h2 class="section-title" style="color:var(--light-text)">
         <span class="cs">Co říkají atleti</span>
         <span class="en">What athletes say</span>
@@ -350,8 +374,7 @@
     <div class="photo-strip__overlay">
       <div class="photo-strip__text">
         <p class="photo-strip__quote">
-          <span class="cs">Silnější spolu —<br /><em>na žíněnce i mimo ni.</em></span>
-          <span class="en">Stronger together —<br /><em>on the mat and beyond.</em></span>
+          Unlock your<br /><em>Retarded Strength</em>
         </p>
       </div>
     </div>
@@ -360,19 +383,11 @@
   <!-- ══════════════════════════ PARTNERS ══════════════════════════ -->
   <section class="section is-light">
     <div class="container" style="text-align:center">
-      <span class="section-label">
-        <span class="cs">Partneři</span>
-        <span class="en">Partners</span>
-      </span>
       <h2 class="section-title" style="color:var(--light-text)">
-        <span class="cs">Se kým pracuji</span>
-        <span class="en">Who I work with</span>
+        <span class="cs">Sparring partneři</span>
+        <span class="en">Sparring partners</span>
       </h2>
       <div class="divider" style="margin-left:auto;margin-right:auto"></div>
-      <p style="color:var(--light-muted);font-size:0.95rem;max-width:500px;margin:0 auto">
-        <span class="cs">Spolupracuji s předními grappling a fitness organizacemi v Česku a na Slovensku.</span>
-        <span class="en">I work with leading grappling and fitness organisations in the Czech Republic and Slovakia.</span>
-      </p>
       <div class="partners__logos">
         <a href="https://darksidemovement.cz" target="_blank" rel="noopener" class="partner-logo">
           <img src="Pictures/DSM Logo.png" alt="Dark Side Movement" />
@@ -390,10 +405,6 @@
   <!-- ══════════════════════════ CONTACT ══════════════════════════ -->
   <section class="section is-dark" id="kontakt">
     <div class="container">
-      <span class="section-label">
-        <span class="cs">Kontakt</span>
-        <span class="en">Contact</span>
-      </span>
       <h2 class="section-title" style="color:#fff">
         <span class="cs">Pojďme spolu začít</span>
         <span class="en">Let's get started</span>
@@ -461,6 +472,7 @@
                   <span class="en">Select a service...</span>
                 </option>
                 <option value="online-program" data-cs="Retarded Strength for BJJ – online program" data-en="Retarded Strength for BJJ – online program">Retarded Strength for BJJ – online program</option>
+                <option value="coaching"       data-cs="Online Coaching"                           data-en="Online Coaching">Online Coaching</option>
                 <option value="inperson"       data-cs="Osobní trénink"                           data-en="In-person training">Osobní trénink</option>
                 <option value="rehab"          data-cs="Injury rehab – návrat na žíněnku"         data-en="Injury rehab – return to mat">Injury rehab – návrat na žíněnku</option>
               </select>
