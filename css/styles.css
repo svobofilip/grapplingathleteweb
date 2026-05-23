@@ -130,7 +130,7 @@ h1, h2, h3, h4 {
 .nav__links {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.4rem;
 }
 .nav__links a {
   font-family: 'Bebas Neue', sans-serif;
@@ -143,70 +143,6 @@ h1, h2, h3, h4 {
 .nav__links a.active { color: var(--gold); }
 .nav__right { display: flex; align-items: center; gap: 0.75rem; }
 
-/* Nav dropdown */
-.nav__dropdown { position: relative; }
-.nav__dropdown > a {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  cursor: pointer;
-}
-.nav__dropdown > a::after {
-  content: '';
-  width: 0; height: 0;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 4px solid currentColor;
-  margin-top: 1px;
-  transition: transform var(--transition);
-}
-.nav__dropdown:hover > a::after { transform: rotate(180deg); }
-.nav__dropdown-menu {
-  position: absolute;
-  top: calc(100% + 12px);
-  left: 50%;
-  transform: translateX(-50%);
-  background: #1a1a1a;
-  border: 1px solid var(--dark-border);
-  border-radius: var(--radius);
-  min-width: 240px;
-  padding: 0.5rem;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateX(-50%) translateY(-6px);
-  transition: opacity var(--transition), transform var(--transition);
-  z-index: 200;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.5);
-}
-.nav__dropdown:hover .nav__dropdown-menu {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateX(-50%) translateY(0);
-}
-.nav__dropdown-menu li a {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  padding: 0.65rem 0.85rem;
-  border-radius: 6px;
-  font-size: 0.82rem;
-  color: var(--dark-muted);
-  transition: var(--transition);
-  white-space: nowrap;
-}
-.nav__dropdown-menu li a:hover {
-  background: rgba(218,165,32,0.1);
-  color: var(--gold);
-}
-.nav__dropdown-menu li a .menu-icon {
-  font-size: 1rem;
-  width: 20px;
-  text-align: center;
-  flex-shrink: 0;
-}
-.nav__dropdown-menu li + li {
-  border-top: 1px solid var(--dark-border);
-}
 
 /* Language switcher */
 .lang-toggle {
@@ -915,26 +851,5 @@ body.lang-en .review-card__quote-en { display: block; }
   display: block;
   padding: 1rem 0;
   color: #e8e8e8;
-}
-/* Mobile: dropdown opens inline instead of floating */
-.nav.nav--open .nav__dropdown-menu {
-  position: static;
-  transform: none;
-  opacity: 1;
-  pointer-events: auto;
-  background: #161616;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  padding: 0 0 0.5rem 1rem;
-  min-width: unset;
-  display: none;
-}
-.nav.nav--open .nav__dropdown.is-open .nav__dropdown-menu { display: block; }
-.nav.nav--open .nav__dropdown-menu li + li { border-top: none; }
-.nav.nav--open .nav__dropdown-menu li a {
-  padding: 0.6rem 0.5rem;
-  font-size: 1rem;
-  color: var(--dark-muted);
 }
 .nav.nav--open .nav__cta { display: block; margin-left: 0; }

@@ -20,27 +20,10 @@
           <span class="cs">Co jsem zač</span>
           <span class="en">About me</span>
         </a></li>
-        <li class="nav__dropdown">
-          <a href="#sluzby">
-            <span class="cs">Služby</span>
-            <span class="en">Services</span>
-          </a>
-          <ul class="nav__dropdown-menu">
-            <li><a href="#sluzba-rs4bjj">
-              <span class="menu-icon">💪</span>
-              Retarded Strength for BJJ
-            </a></li>
-            <li><a href="#sluzba-rehab">
-              <span class="menu-icon">🩹</span>
-              <span class="cs">Zpátky na žíněnku</span>
-              <span class="en">Back on the Mat</span>
-            </a></li>
-            <li><a href="#sluzba-coaching">
-              <span class="menu-icon">🎯</span>
-              Online Coaching
-            </a></li>
-          </ul>
-        </li>
+        <li><a href="#sluzby">
+          <span class="cs">Jak ti můžu pomoct</span>
+          <span class="en">What Do I Offer</span>
+        </a></li>
         <li><a href="#recenze">
           <span class="cs">Recenze</span>
           <span class="en">Reviews</span>
@@ -102,13 +85,6 @@
             <span class="cs">Cílem <strong>Grappling Athlete</strong> je odemčít co nejvíce grapplerům Retarded Strength a udělat z nich výbušná a nafýzovaná monstra, která se jen tak nezraní (a když už, tak budou brzo zpátky).</span>
             <span class="en">The goal of <strong>Grappling Athlete</strong> is to unlock Retarded Strength for as many grapplers as possible — turning them into explosive, jacked monsters that don't get injured easily (and when they do, they'll be back fast).</span>
           </p>
-          <div class="about__badges">
-            <span class="badge"><span class="cs">Fyzioterapeut</span><span class="en">Physiotherapist</span></span>
-            <span class="badge"><span class="cs">S&amp;C trenér</span><span class="en">S&amp;C Coach</span></span>
-            <span class="badge">BJJ Blue Belt</span>
-            <span class="badge">Dark Side Movement</span>
-            <span class="badge">SWAG Brno</span>
-          </div>
           <div class="about__social">
             <a href="https://www.instagram.com/fidasvoboda/" target="_blank" rel="noopener" class="about__social-btn">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
@@ -431,14 +407,11 @@
             <div class="form-group">
               <label for="subject"><span class="cs">Téma</span><span class="en">Subject</span></label>
               <select id="subject">
-                <option value="" disabled selected>
-                  <span class="cs">Vyber službu...</span>
-                  <span class="en">Select a service...</span>
-                </option>
-                <option value="online-program" data-cs="Retarded Strength for BJJ – online program" data-en="Retarded Strength for BJJ – online program">Retarded Strength for BJJ – online program</option>
-                <option value="coaching"       data-cs="Online Coaching"                           data-en="Online Coaching">Online Coaching</option>
-                <option value="inperson"       data-cs="Osobní trénink"                           data-en="In-person training">Osobní trénink</option>
-                <option value="rehab"          data-cs="Injury rehab – návrat na žíněnku"         data-en="Injury rehab – return to mat">Injury rehab – návrat na žíněnku</option>
+                <option value="" disabled selected>Vyber službu...</option>
+                <option value="coaching"      data-cs="Online Coaching"                              data-en="Online Coaching">Online Coaching</option>
+                <option value="rehab"         data-cs="Rehab po zranění"                             data-en="Injury rehab">Rehab po zranění</option>
+                <option value="program"       data-cs="Tréninkový program Retarded Strength"         data-en="Retarded Strength training program">Tréninkový program Retarded Strength</option>
+                <option value="other"         data-cs="Jiný dotaz"                                   data-en="Other question">Jiný dotaz</option>
               </select>
             </div>
             <div class="form-group">
@@ -463,12 +436,8 @@
         <img src="Pictures/Logo.png" alt="Grappling Athlete" />
       </a>
       <p class="footer__copy">
-        &copy; 2025 Grappling Athlete &mdash; Filip Svoboda, IČO: 19276907
+        &copy; 2026 Grappling Athlete &mdash; Filip Svoboda, IČO: 19276907
       </p>
-      <nav class="footer__links">
-        <a href="#sluzby"><span class="cs">Program</span><span class="en">Program</span></a>
-        <a href="#kontakt"><span class="cs">Kontakt</span><span class="en">Contact</span></a>
-      </nav>
     </div>
   </footer>
 
@@ -504,18 +473,8 @@
     const hamburger = document.getElementById('hamburger');
     hamburger.addEventListener('click', () => nav.classList.toggle('nav--open'));
 
-    // Mobile dropdown: toggle inline on tap
-    document.querySelectorAll('.nav__dropdown > a').forEach(link => {
-      link.addEventListener('click', e => {
-        if (nav.classList.contains('nav--open')) {
-          e.preventDefault();
-          link.closest('.nav__dropdown').classList.toggle('is-open');
-        }
-      });
-    });
-
-    // Close nav on regular link click
-    document.querySelectorAll('.nav__links a:not(.nav__dropdown > a)').forEach(link =>
+    // Close nav on link click
+    document.querySelectorAll('.nav__links a').forEach(link =>
       link.addEventListener('click', () => nav.classList.remove('nav--open'))
     );
 
