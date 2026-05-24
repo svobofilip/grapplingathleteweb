@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grappling Athlete | Filip Svoboda</title>
   <meta name="description" content="Silově-kondiční trénink a fyzioterapie pro BJJ a grappling atlety. Online program, injury recovery." />
+  <link rel="icon" type="image/png" href="Pictures/Logo.png" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -395,18 +396,18 @@
         </div>
 
         <div class="contact__form-wrap">
-          <form>
+          <form action="https://formspree.io/f/xredlvzk" method="POST">
             <div class="form-group">
               <label for="name"><span class="cs">Jméno</span><span class="en">Name</span></label>
-              <input type="text" id="name" placeholder="Filip Novák" />
+              <input type="text" id="name" name="name" placeholder="Filip Novák" />
             </div>
             <div class="form-group">
               <label for="email">E-mail</label>
-              <input type="email" id="email" placeholder="tvuj@email.cz" />
+              <input type="email" id="email" name="email" placeholder="tvuj@email.cz" />
             </div>
             <div class="form-group">
               <label for="subject"><span class="cs">Téma</span><span class="en">Subject</span></label>
-              <select id="subject">
+              <select id="subject" name="subject">
                 <option value="" disabled selected>Vyber službu...</option>
                 <option value="coaching"      data-cs="Online Coaching"                              data-en="Online Coaching">Online Coaching</option>
                 <option value="rehab"         data-cs="Rehab po zranění"                             data-en="Injury rehab">Rehab po zranění</option>
@@ -416,7 +417,7 @@
             </div>
             <div class="form-group">
               <label for="message"><span class="cs">Zpráva</span><span class="en">Message</span></label>
-              <textarea id="message" placeholder="Jak ti mohu pomoct?"></textarea>
+              <textarea id="message" name="message" placeholder="Jak ti mohu pomoct?"></textarea>
             </div>
             <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
               <span class="cs">Odeslat zprávu</span>
