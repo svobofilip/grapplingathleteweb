@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grappling Athlete | Filip Svoboda</title>
   <meta name="description" content="Silově-kondiční trénink a fyzioterapie pro BJJ a grappling atlety. Online program, injury recovery." />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLZ716YZB3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KLZ716YZB3');
+  </script>
   <link rel="icon" type="image/png" href="Pictures/Logo.png" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -306,13 +314,31 @@
           </div>
         </div>
 
+        <!-- Katarina Vojvodová -->
+        <div class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__quote">
+            „Grappling Athlete / Retarded Strength for BJJ je top program. Osobne cítim veľký progres, no zároveň nemám pocit, že mi silovka uberá energiu na jitsu. Tréningy sa dajú veľmi ľahko upraviť podľa fázy prípravy a Filip je nápomocný vždy, keď je to potrebné. Odporúčam všetkým (aj fanúšikom kimona)."
+          </p>
+          <p class="review-card__quote-en">
+            "Grappling Athlete / Retarded Strength for BJJ is a top programme. I personally feel major progress, yet I never feel like the strength work is draining my energy for jiu-jitsu. The sessions are very easy to adjust depending on your training phase, and Filip is always helpful whenever needed. I recommend it to everyone — gi fans included."
+          </p>
+          <div class="review-card__author">
+            <div class="review-card__avatar"><img src="Pictures/kacka.jpg" alt="Katarina Vojvodová" /></div>
+            <div>
+              <div class="review-card__name">Katarina Vojvodová</div>
+              <div class="review-card__role">Purple Belt z Gorilla Academy</div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- ══════════════════════════ PHOTO STRIP 2 ══════════════════════════ -->
   <div class="photo-strip">
-    <img src="Pictures/swagpumplingroup.jpg" alt="SWAG Brno group" />
+    <img src="Pictures/swagpumpingroup.jpeg" alt="SWAG Brno group" />
     <div class="photo-strip__overlay">
       <div class="photo-strip__text">
         <p class="photo-strip__quote">
@@ -397,7 +423,7 @@
         </div>
 
         <div class="contact__form-wrap">
-          <form action="https://formspree.io/f/xredlvzk" method="POST">
+          <form id="contact-form" action="https://formspree.io/f/xredlvzk" method="POST">
             <div class="form-group">
               <label for="name"><span class="cs">Jméno</span><span class="en">Name</span></label>
               <input type="text" id="name" name="name" placeholder="Filip Novák" />
@@ -424,6 +450,10 @@
               <span class="cs">Odeslat zprávu</span>
               <span class="en">Send message</span>
             </button>
+            <p id="form-success" style="display:none;margin-top:1rem;color:var(--gold);font-family:'Bebas Neue',sans-serif;letter-spacing:0.08em;font-size:1.1rem;">
+              <span class="cs">✓ Zpráva odeslána! Ozvu se co nejdřív.</span>
+              <span class="en">✓ Message sent! I'll get back to you soon.</span>
+            </p>
           </form>
         </div>
 
@@ -479,6 +509,27 @@
     document.querySelectorAll('.nav__links a').forEach(link =>
       link.addEventListener('click', () => nav.classList.remove('nav--open'))
     );
+
+    // ── Contact form AJAX ──
+    const contactForm = document.getElementById('contact-form');
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = contactForm.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      try {
+        const res = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          contactForm.reset();
+          document.getElementById('form-success').style.display = 'block';
+        }
+      } finally {
+        btn.disabled = false;
+      }
+    });
 
     // ── Nav shadow on scroll ──
     window.addEventListener('scroll', () => {

@@ -559,7 +559,7 @@ body.lang-en .is-block.en { display: block; }
 .photo-strip__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(14,14,14,0.55) 0%, transparent 60%);
+  background: linear-gradient(to right, rgba(14,14,14,0.75) 0%, rgba(14,14,14,0.35) 100%);
   display: flex;
   align-items: center;
 }
@@ -569,7 +569,7 @@ body.lang-en .is-block.en { display: block; }
 }
 .photo-strip__quote {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(2rem, 4.5vw, 5rem);
+  font-size: clamp(2.4rem, 5.5vw, 6.2rem);
   line-height: 1.1;
   white-space: nowrap;
 }
